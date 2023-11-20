@@ -1,0 +1,62 @@
+nav {
+    margin: 0;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(142, 120, 120, 0.229);
+}
+
+nav span {
+    color: black;
+}
+
+nav button {
+    background-color: blue;
+    color: white;
+}
+
+.maindiv {
+    margin: 0;
+    background-image: url("../Images/p1.jpg");
+    background-position: center center;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    background-color: (142, 120, 120, 0.229);
+    height: 200px;
+}
+
+.fitem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+i {
+    color: blue;
+
+    
+}
+
+h3 {
+    margin: 0;
+}
+
+form button {
+    color: white;
+    background-color: blue;
+}

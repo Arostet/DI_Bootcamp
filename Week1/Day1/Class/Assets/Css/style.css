@@ -1,0 +1,44 @@
+#p1 {
+    margin: 5px;
+    padding: 5px;
+    border: double 5px green;
+
+}
+
+#p2 {
+    margin: 5px;
+    padding: 5px;
+    border: ridge 5px blueviolet;
+
+
+}
+
+#p3 {
+    margin: 5px;
+    padding: 5px;
+    border: groove 5px black;
+
+}
+
+div {
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+}
+
+.red {
+    background-color: red;
+}
+
+.white {
+    background-color: white;
+}
+
+.blue {
+    background-color: blue;
+}
