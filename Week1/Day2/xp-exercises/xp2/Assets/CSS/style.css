@@ -1,0 +1,102 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-image: linear-gradient(to bottom, rgb(70, 11, 112) , rgba(74, 4, 92, 0.682));
+
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+ #email {
+    background-color: rgb(234, 234, 234);
+    color: #343a40;
+    margin: 2vh;
+    height: 30px;
+    border-style: none;
+ }
+
+ #password {
+    background-color: rgb(234, 234, 234);
+    color: #343a40;
+    margin: 2vh;
+    height: 30px;
+    border-style: none;
+ }
+
+ #email::placeholder {
+    font-weight: bold;
+    padding-left: 5%;
+  }
+
+  #password::placeholder {
+    font-weight: bold;
+    padding-left: 5%;
+  }
+  
+  #rl {
+    padding-right: 13vh;
+  }
+
+
+  #b1 {
+    margin: 5vh;
+    width: 80%;
+    height: 30px;
+    background-color: purple;
+    color: white;
+    border-color: purple;
+  }
+
+  #connect {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin:10px 0 20px
+  }
+
+  #connect span {
+    background: #fff;
+    padding: 0 10px;
+  }
+
+  i {
+    margin: 3vh
+  }
+
+  
+
+/* right side */
+  .righttext{
+    color: white;
+  }
+
+#register {
+    border: solid 2px white;
+    border-radius: 25px;
+}

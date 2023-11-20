@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+img {
+    height: 200px;
+    width: 150px;
+}
+
+
+
+
+.product {
+    display: inline-block;
+    padding: 3vh;
+    text-align: center;
+
+}
+
+.container1 {
+    margin-left: 20%;
+}
+
+
+.container2 {
+    margin-left: 20%;
+}
+
+
+.container3 {
+    margin-left: 20%;
+}
+
+.pname {
+    font-size:  18px;
+    font-weight: bold;
+}
+
+.price {
+    color: green;
+    display: inline;
+}
+
+.nprice {
+    text-decoration:line-through;
+    font-size: smaller;
+    margin: 2px;
+    display: inline;
+}
+

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: black;
+    height: 10vh;
+    color: white;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    display: inline;
+    margin: 4vh;
+}
+
+nav i {
+    margin: 3vh;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 10vh;
+  }
+
+div p {
+    display: inline;
+    padding: 10vh;
+}
