@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(232, 239, 239);
+    border: 1px solid red;
+    margin: 4%;
+    padding: 2%;
+}
+
+hr {
+    width: 40px; 
+    margin-left: 0;;
+}
+header {
+    display: grid;
+    border: solid 1px red;
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: 20vh;
+    gap: 0px;
+    grid-template-areas: 
+    "w w f p"
+    "w w f p"
+}
+.whead {
+    display: flex;
+    flex-direction: column;
+    grid-area: w;
+    margin: 30px 50px;
+    
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    float: right;
+    grid-area: p;
+    margin-top: 30px;
+}
+
+main {
+    border: solid 1px red;
+    background-color: blue;
+    /* padding: 3%; */
+    margin: 2%;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50vh;
+    gap: 10px;
+    grid-template-areas: 
+    "c p p"
+    "e w w" ;
+}
+
+.c {
+    grid-area: c;
+    background-color: rgb(232, 239, 239);
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+i {
+    padding: 1vh;
+}
+
+.p{
+    grid-area: p;
+    background-color: rgb(232, 239, 239);
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.e {
+    grid-area: e;
+    background-color: rgb(232, 239, 239);
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.w {
+    grid-area: w;
+    background-color: rgb(232, 239, 239);
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}

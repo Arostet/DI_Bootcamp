@@ -1,0 +1,35 @@
+.item {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border: solid 1px black;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    background-color: aqua;
+}
+
+
+.line1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.line2 {
+    width: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
