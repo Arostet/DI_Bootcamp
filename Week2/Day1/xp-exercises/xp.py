@@ -45,9 +45,10 @@
 # else:
 #     print("The odds are against us, but fear not. We may not have the same name, but we have the same spirit!")
 
-#Exercise 9
-user_height = int(input("What is your height in inches?"))
-if user_height > 145:
-    print("Congrats! You are tall enough to ride")
-else:
-    print("Sorry, you've got some growing to do.")
+# #Exercise 9
+# user_height = int(input("What is your height in inches?"))
+# if user_height > 145:
+#     print("Congrats! You are tall enough to ride")
+# else:
+#     print("Sorry, you've got some growing to do.")
+
