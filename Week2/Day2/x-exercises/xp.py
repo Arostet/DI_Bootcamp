@@ -57,25 +57,27 @@
 #     print("You chose one of your favorite fruits! Enjoy!")
 
 #X8
-# toppings_list = []
-# total_price = 10  # Base price for the pizza
-# active = True
-# while active:
-#     topping = input("Enter a pizza topping (or 'quit' to finish): ")
 
-#     if topping == 'quit':
-#         break
+toppings_list = []
+total_price = 10  # Base price for the pizza
+active = True
+while active:
+    #get input
+    topping = input("Enter a pizza topping (or 'quit' to finish): ")
+    #define break
+    if topping == 'quit':
+        break
+    #define actions of while loop
+    toppings_list.append(topping)
+    total_price += 2.5  # Add 2.5 for each topping
 
-#     toppings_list.append(topping)
-#     total_price += 2.5  # Add 2.5 for each topping
+    print(f"Adding {topping} to your pizza.")
 
-#     print(f"Adding {topping} to your pizza.")
+print("Toppings on your pizza:")
+for i in toppings_list:
+    print(f"- {i}")
 
-# print("Toppings on your pizza:")
-# for topping in toppings_list:
-#     print(f"- {topping}")
-
-# print(f"Total price for your pizza: ${total_price}")
+print(f"Total price for your pizza: ${total_price}")
 
 # #X9
 # total_price = 0
