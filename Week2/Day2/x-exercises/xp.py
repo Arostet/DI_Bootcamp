@@ -59,8 +59,8 @@
 #X8
 # toppings_list = []
 # total_price = 10  # Base price for the pizza
-
-# while True:
+# active = True
+# while active:
 #     topping = input("Enter a pizza topping (or 'quit' to finish): ")
 
 #     if topping == 'quit':
@@ -77,10 +77,11 @@
 
 # print(f"Total price for your pizza: ${total_price}")
 
-#X9
+# #X9
 # total_price = 0
+# active = True
 
-# while True:
+# while active:
 #     age = int(input("What's your age? **0 will quit** "))
     
 #     if age == 0:
