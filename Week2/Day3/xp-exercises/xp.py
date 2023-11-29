@@ -80,3 +80,22 @@ sorted_dict = dict(sorted(dict_a.items()))
 print(sorted_dict)
 
 #4 still need to do
+
+for x in dict_a.keys():
+    if x[0] == 'M':
+        print(x)
+        break
+    elif x[0] == 'P':
+        print(x)
+        break
+    else:
+        continue
+
+for x in dict_a.keys():
+    for y in x:
+        if y == 'i':
+            print(x)
+            break
+        else:
+            continue
+    break
