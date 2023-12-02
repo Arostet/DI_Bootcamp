@@ -81,50 +81,49 @@ import random
 #         print("It might be the day for some AC.")
 # main()
 
-# #X8
-# data = [
-#     {
-#         "question": "What is Baby Yoda's real name?",
-#         "answer": "Grogu"
-#     },
-#     {
-#         "question": "Where did Obi-Wan take Luke after his birth?",
-#         "answer": "Tatooine"
-#     },
-#     {
-#         "question": "What year did the first Star Wars movie come out?",
-#         "answer": "1977"
-#     },
-#     {
-#         "question": "Who built C-3PO?",
-#         "answer": "Anakin Skywalker"
-#     },
-#     {
-#         "question": "Anakin Skywalker grew up to be who?",
-#         "answer": "Darth Vader"
-#     },
-#     {
-#         "question": "What species is Chewbacca?",
-#         "answer": "Wookiee"
-#     }
-# ]
+#X8
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977"
+    },
+    {
+        "question": "Who built C-3PO?",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
 
-# def star_quiz(data):
-#     correct = 0
-#     incorrect = 0
-#     inc_ans = []
-    
-#     for i in data:
-#         user_ans = input(i["question"])
-#         if user_ans.lower() != i["answer"].lower():
-#             print("Sorry, wrong answer")
-#             incorrect +=1
-#             inc_ans.append(i["question"])
-#         else:
-#             print("Nice! That's right.")
-#             correct +=1
+def star_quiz(data):
+    correct = 0
+    incorrect = 0
+    inc_ans = []
+    for i in data:
+        user_ans = input(i["question"])
+        if user_ans.lower() != i["answer"].lower():
+            print("Sorry, wrong answer")
+            incorrect +=1
+            inc_ans.append(i["question"])
+        else:
+            print("Nice! That's right.")
+            correct +=1
+    print(f"You got {incorrect} wrong and {correct} questions right! ")
+    if incorrect > 0:
+        print("Incorrect answers:", inc_ans)
 
-#     print(f"You got {incorrect} wrong and {correct} questions right! ")
-#     if incorrect > 0:
-#         print("Incorrect answers:", inc_ans)
-# star_quiz(data)
+star_quiz(data)
