@@ -64,16 +64,30 @@
 
 # print(vowel_cons(abc_string))
 
-words =input("7 words: ")
-char = input("Char: ")
+# #X6
+# words =input("7 words: ")
+# char = input("Char: ")
 
-def get_index_let(words, char):
-    words_list = [i.strip() for i in words.split(" ")]
-    for i in words_list:
-        if char in i:
-            ind =i.index(char)
-            print(f'{ind} is the index of the letter {char} in {i}.')
-            continue
-        else: 
-            print(f'{i} does not contain {char}.')
-get_index_let(words, char)
+# def get_index_let(words, char):
+#     words_list = [i.strip() for i in words.split(" ")]
+#     for i in words_list:
+#         if char in i:
+#             ind =i.index(char)
+#             print(f'{ind} is the index of the letter {char} in {i}.')
+#             continue
+#         else: 
+#             print(f'{i} does not contain {char}.')
+# get_index_let(words, char)
+
+#X1
+
+item = input("Any word inserted at place 4: ")
+script = input("Any script: ")
+
+def place_item(item, script):
+    script_list = [i.strip() for i in script.split("")]
+    index = 4
+
+    script_list.insert(index, item)
+    
+
