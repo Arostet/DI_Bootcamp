@@ -1,26 +1,25 @@
 #1
-# class Cat:
-#     def __init__(self, cat_name, cat_age):
-#         self.name = cat_name
-#         self.age = cat_age
+class Cat:
+    def __init__(self, cat_name, cat_age):
+        self.name = cat_name
+        self.age = cat_age
 
-# cat1 = Cat("Rumples", 12)
-# cat2 = Cat('Harry', 2)
-# cat3 = Cat('Zandor', 50)
+cat1 = Cat("Rumples", 12)
+cat2 = Cat('Harry', 2)
+cat3 = Cat('Zandor', 50)
 
-# # all_cat_ages = [cat1.age, cat2.age, cat3.age]
-# all_cats = [cat1, cat2, cat3]
-# def find_oldest(cats):
-#     oldest = 0
-#     old_cat = ""
-#     for i in all_cats:
-#         if i.age > oldest:
-#             oldest = i.age
-#             old_cat = i.name
-#         else:
-#             continue
-#     print(f'The oldest cat is {old_cat} at {oldest} years old')
-# find_oldest(all_cats)
+all_cats = [cat1, cat2, cat3]
+def find_oldest(cats):
+    oldest = 0
+    old_cat = ""
+    for i in all_cats:
+        if i.age > oldest:
+            oldest = i.age
+            old_cat = i.name
+        else:
+            continue
+    print(f'The oldest cat is {old_cat} at {oldest} years old')
+find_oldest(all_cats)
 
 # #2
 # class Dog():
