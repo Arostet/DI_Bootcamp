@@ -65,6 +65,8 @@ p.last_page()
 print(p.getVisibleItems())
 p.go_to_page()
 print(p.getVisibleItems())
+p.previous_page()
+print(p.getVisibleItems())
 
 
 

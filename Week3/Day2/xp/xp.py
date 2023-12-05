@@ -114,6 +114,10 @@ class TheIncredibles(Family):
                 print(dict["power"])
             else:
                 raise Exception("Too young to use power...")
+    def incredible_presentation(self):
+        super().family_presentation()
+
 inc1 = TheIncredibles('Incredible')   
 inc1.born(name="Michael", age=35, gender='male', is_child= False, power='fly', incredible_name='MikeFly')
 inc1.use_power()
+inc1.incredible_presentation()
