@@ -1,9 +1,16 @@
 import math
 
 class Circle():
-    def __init__(self, diameter):
+    def __init__(self, radius, diameter):
+        self.radius = radius
         self.diameter = diameter
         self.circle_list = []
+    @classmethod
+    def from_rad(cls, radius):
+        return cls(radius=radius, diameter=radius * 2)
+    @classmethod
+    def from_diam(cls, diameter):
+        return cls(radius = diameter / 2, diameter = diameter)
     def find_area(self):
         area = (1/4) * math.pi * self.diameter**2
         return area
@@ -11,8 +18,8 @@ class Circle():
         a = self.find_area()
         return f'This circle has a diameter of {self.diameter} and an area of {a}.'
     def __add__(self, other):
-        new_a = self.diameter + other.diameter
-        return Circle(new_a)
+        new_diameter = self.diameter + other.diameter
+        return Circle(new_diameter)
     def __iadd__(self, other):
         self.diameter += other.diameter
         return self
@@ -47,5 +54,5 @@ print(c1)
 print(combined)
 print(c1.is_greater(c2))
 print(c1.make_list(c2, c3, c4 ))
-c1+=c4
+# c1+=c4
 print(c1)

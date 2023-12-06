@@ -1,0 +1,43 @@
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_name = http://www.practicepython.org/assets/nameslist.txt
+file_path = os.path.join(script_dir, file_name)
+
+with open(file_path, 'r') as file:
+    for line in file:
+        print(line.strip())
+
+
+
+
+
+# script_dir = os.path.dirname(os.path.abspath(__file__))
+# file_name = 'example.txt'
+# file_path = os.path.join(script_dir, file_name)
+
+# with open(file_path, 'w') as file:
+#     # Writing lines to the file
+#     for i in range(1, 6):
+#         file.write(f'This is line {i}\n')
+
+# # with open(file_path, 'w') as file:
+# #     # Writing lines to the file
+# #     for i in range(1, 6):
+# #         file.write(f'This is line {i}\n')
+
+# # # Opening the file for reading
+# with open(file_path, encoding='UTF-8', mode='r') as file:
+#     # Reading and printing each line
+#     for line in file:
+#         print(line.strip())
+
+# # # Appending to the file
+# with open(file_path, 'a') as file:
+#     file.write('This line is appended\n')
+
+# # # Reading the file after appending
+# with open(file_path, 'r') as file:
+#     # Reading and printing each line
+#     for line in file:
+#         print(line.strip())
