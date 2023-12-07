@@ -1,0 +1,21 @@
+Answer the following questions
+
+1) What is a class?
+A class is very important to Object Oriented Programming.
+It's the containter for the objects. It defines attributes that each object will have.
+It also gives methods that can be applied to each object
+
+2) What is an instance?
+An instance, the object, is an occurence in the class. It has specific attributes
+that are defined in the Class. Many instances can exist for the same class.
+
+3) What is encapsulation?
+Encapsulation is the bundling of methods and attributes into something that limits the 
+ability to access or change it. 
+
+What is abstraction?
+
+What is inheritance?
+What is multiple inheritance?
+What is polymorphism?
+What is method resolution order or MRO?
