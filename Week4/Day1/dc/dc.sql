@@ -1,0 +1,25 @@
+-- CREATE TABLE actors ( 
+-- 	id serial PRIMARY KEY,
+-- 	first_name varchar (50) NOT NULL,
+-- 	last_name varchar (50) NOT NULL,
+-- 	birth_date date
+-- )
+
+-- INSERT INTO actors (first_name, last_name, birth_date)
+-- VALUES   ('Tom', 'Hanks', '1956-07-09'),
+--   ('Meryl', 'Streep', '1949-06-22'),
+--   ('Denzel', 'Washington', '1954-12-28'),
+--   ('Julia', 'Roberts', '1967-10-28'),
+--   ('Leonardo', 'DiCaprio', '1974-11-11'),
+--   ('Charlize', 'Theron', '1975-08-07'),
+--   ('Brad', 'Pitt', '1963-12-18'),
+--   ('Angelina', 'Jolie', '1975-06-04'),
+--   ('Johnny', 'Depp', '1963-06-09'),
+--   ('Scarlett', 'Johansson', '1984-11-22');
+-- 1.
+-- SELECT * FROM actors
+-- SELECT COUNT(*) FROM actors
+-- 2.
+-- INSERT INTO actors (first_name, last_name, birth_date)
+-- VALUES   ('', '', '')
+-- An error is given because I made the column NOT NULL meaning that it has to be filled
