@@ -1,5 +1,4 @@
 import random
-
 class Card():
     def __init__(self):
         self.suit = self.gen_suit()
