@@ -1,8 +1,8 @@
-ALTER 
+-- ALTER 
 
 -- DELETE FROM products WHERE user_id=3
 
-SELECT * FROM products
+-- SELECT * FROM products
 
 -- UPDATE products SET username = 'iPhone656' , description = 'jhajdnkjwndkjasnja' 
 -- WHERE user_id = 1
