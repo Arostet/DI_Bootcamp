@@ -9,22 +9,6 @@ class Game():
         self.computer_wins = 0
         self.games_played = 0
 
-        root = Tk()
-        root.title("RPS Game")
-
-        mainframe = ttk.Frame(root, padding="3 3 12 12")
-        mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-        root.columnconfigure(0, weight=1)
-        root.rowconfigure(0, weight=1)
-
-        button = ttk.Button(root, command=self.play, text='play')
-        button.pack()
-
-        widget1 = StringVar()
-        widget1_entry = ttk.Entry(mainframe, width=7, textvariable=widget1)
-        widget1_entry.grid(column=2, row=1, sticky=(W, E))
-
-        root.mainloop()
 
     def get_user_rps(self):
         while True:
@@ -83,4 +67,4 @@ class Game():
 
 
 game = Game()
-# game.play()
+game.play()
