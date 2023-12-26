@@ -1,0 +1,18 @@
+.aClass {
+  background-color: red;
+}
+
+.bClass {
+  border: 10px dotted blue;
+}
+
+.cClass {
+  height: 400px;
+  display: inline-block;
+}
+
+.pClass {
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aqua;
+}
