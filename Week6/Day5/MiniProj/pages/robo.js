@@ -101,18 +101,15 @@ let form1 = document.getElementById("thisform");
 form1.addEventListener("input", function (e) {
   e.preventDefault();
   const inputValue = document.getElementById("searchbox").value.toLowerCase();
-  const filterArray = [];
-  robots.filter((card) => {
-    if (card.username.toLowerCase() === inputValue) {
-      filterArray.push(card);
-    } else if (card.email.toLowerCase() === inputValue) {
-      filterArray.push(card);
-    } else if (card.name.toLowerCase() === inputValue) {
-      filterArray.push(card);
-    } else {
-      console.log("Sorry! That robot doesn't live here.");
-    }
-  });
+  const filterArray = robots.filter(
+    (card) =>
+      card.username.toLowerCase() === inputValue ||
+      card.email.toLowerCase() === inputValue ||
+      card.name.toLowerCase() === inputValue
+  );
+  // if (filterArray.length === 0) {
+  //   console.log("Sorry! That robot doesn't live here.");
+  // }
   genRobots(filterArray);
 });
 
