@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Class</title>
+  </head>
+  <body>
+    <h2>Get all users</h2>
+    <form action="https://jsonplaceholder.typicode.com/users" method="get">
+      <input type="submit" value="send" />
+    </form>
+    <h2>Get user by id</h2>
+    <form action="https://jsonplaceholder.typicode.com/users" method="GET">
+      <input type="number" min="1" max="10" name="id" />
+      <input type="submit" value="send" />
+    </form>
+    <h2>All User Posts</h2>
+    <form action="https://jsonplaceholder.typicode.com/posts" method="get">
+      <input type="submit" value="send" />
+    </form>
+    <h2>Get posts by id</h2>
+    <form action="https://jsonplaceholder.typicode.com/posts" method="GET">
+      <input type="number" min="1" max="10" name="userId" />
+      <input type="submit" value="send" />
+    </form>
+
+    <h2>Add Post To User</h2>
+    <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+      Title: <input type="text" name="title" /> Body:
+      <input type="text" name="body" /> UserId:
+      <input type="number" name="userdId" />
+      <input type="submit" value="send" />
+    </form>
+    <h2>Get all users</h2>
+    <form action="https://users-18kl.onrender.com/users" method="get">
+      <input type="submit" value="send" />
+    </form>
+    <h2>Add User</h2>
+    <form action="https://users-18kl.onrender.com/user" method="POST">
+      Name: <input type="text" name="name" /> Email:
+      <input type="text" name="email" />
+      Username:
+      <input type="text" name="username" />
+      <input type="submit" value="send" />
+    </form>
+    <script src="class.js"></script>
+  </body>
+</html>

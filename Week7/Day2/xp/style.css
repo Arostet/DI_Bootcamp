@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  align-items: center;
+}
+#nameInput {
+  width: 30%;
+  margin: 2vh;
+}
+
+#messageInput {
+  width: 50%;
+  margin: 2vh;
+  vertical-align: top;
+  padding-top: 0px;
+}
+
+#submitButton {
+  width: 20%;
+  margin: 2vh;
+}
