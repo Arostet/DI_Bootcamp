@@ -86,10 +86,11 @@ const morse = `{
 
 const toJs = () => {
   return new Promise((resolve, reject) => {
-    if (morse.length === 0) {
+    let objMorse = JSON.parse(morse);
+    if (Object.keys(objMorse).length === 0) {
       reject("You don't know morse code, do you?");
     } else {
-      resolve(JSON.parse(morse));
+      resolve(objMorse);
     }
   });
 };
@@ -99,30 +100,28 @@ toJs().then((response) => console.log(response));
 const toMorse = (morseJs) => {
   return new Promise((resolve, reject) => {
     const userWord = prompt("Write a word:");
-    let morseArray = [];
-    for (let i of userWord) {
-      if (i in morseJs) {
-        morseArray += morseJs[i];
+    const arrStr = userWord.toLowerCase().split("");
+    const ReturnArr = arrStr.map((char) => {
+      if (char in morseJs) {
+        return morseJs[char];
       } else {
-        reject("There's a strange character in this word");
+        reject("Character not valid");
       }
-    }
-    resolve(morseArray);
+    });
+    resolve(ReturnArr);
   });
 };
 
 const joinWords = (morseTranslation) => {
-  return morseTranslation.map((element) => element + "\n");
+  return morseTranslation.map((element) => `<div>${element}</div>`);
 };
 
 toJs()
   .then((morseJs) => {
-    console.log(morseJs);
     return toMorse(morseJs);
   })
-  .then((morseCode) => {
-    console.log(morseCode);
-    return morseCode;
+  .then((result) => {
+    return result;
   })
   .then((morseTranslation) => {
     return joinWords(morseTranslation);
