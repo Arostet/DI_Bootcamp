@@ -4,4 +4,3 @@ import { read } from "./read-file.js";
 
 console.log(greet("Mikey"));
 console.log(randomStuff("Youre here"));
-read;
