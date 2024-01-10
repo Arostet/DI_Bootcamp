@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const books = [
   {
@@ -84,4 +86,12 @@ app.get("/books/:id", (request, response) => {
   } else {
     response.json(book);
   }
+});
+
+app.post("/books", (req, res) => {
+  const newBook = { ...req.body, id: books.length + 1 };
+  books.push(newBook);
+
+  res.json(books);
+  res.statusCode(201);
 });
