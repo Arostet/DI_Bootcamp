@@ -4,7 +4,8 @@ app.listen(3001, () => {
   console.log("running on 3001");
 });
 app.use("/", express.static(__dirname + "/public"));
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 const emojis = [
   { emoji: "😀", name: "Smile" },
   { emoji: "🐶", name: "Dog" },
@@ -42,4 +43,11 @@ app.get("/emojis", (request, response) => {
   return response.json(emojis);
 });
 
-app.get("/game", (request, response) => {});
+app.post("/emojis", (req, res) => {
+  const { winningText, val } = req.body;
+  if (winningText == val) {
+    res.send({ message: "Correct" });
+  } else {
+    res.send({ message: "Not Correct" });
+  }
+});

@@ -1,7 +1,10 @@
 const express = require("express");
+// const bp = require("body-parser");
 const app = express();
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 //listen
+//CRUD Create-POST , Read -GET, Update -PUT, DELETE - DELTE
 
 app.listen(3001, () => {
   console.log("run on port 3001");
@@ -54,4 +57,38 @@ app.get("/search", (request, response) => {
     return response.status(404).json({ msg: "user not found" });
   }
   response.send(filterUsers);
+});
+
+//POST Request =CREATE
+
+app.post("/users", (req, res) => {
+  console.log(req.body);
+  const newUser = { ...req.body, id: users.length + 1 };
+  users.push(newUser);
+
+  res.json(users);
+  //res.send(users) --same as sending json() except json is known to be a JSON
+});
+
+///UPDATE --PUT
+//user id that you want to update
+app.put("/users/:id", (req, res) => {
+  const { id } = req.params;
+  const { name, email } = req.body;
+  const index = users.findIndex((item) => item.id == id);
+  if (index === -1) return res.sendStatus(404);
+
+  users[index] = { ...users[index], name: name, email: email };
+
+  res.json(users);
+});
+
+//DELETE
+app.delete("/users/:id", (req, res) => {
+  const { id } = req.params;
+  const index = users.findIndex((item) => item.id == id);
+  if (index === -1) return res.sendStatus(404);
+  users.splice(index, 1);
+
+  res.json(users);
 });

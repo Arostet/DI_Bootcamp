@@ -71,25 +71,50 @@ const randomizeAnswers = (ul) => {
 let counter = 0;
 const form = document.forms[0];
 console.log(form);
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const val = form[0].value;
+//   console.log(val);
+//   const winner = document.getElementById("textWinner");
+//   const winningText = winner.textContent;
+//   console.log(winningText);
+//   if (winningText.toLowerCase() === val.toLowerCase()) {
+//     const div = document.createElement("div");
+//     div.textContent = "You Won!";
+//     counter += 1;
+//     console.log(counter);
+//     const divBase = document.getElementById("winOrLose");
+//     divBase.appendChild(div);
+//   } else {
+//     const div = document.createElement("div");
+//     div.textContent = "You Lost!";
+//     const divBase = document.getElementById("winOrLose");
+//     divBase.appendChild(div);
+//   }
+// });
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const val = form[0].value;
-  console.log(val);
   const winner = document.getElementById("textWinner");
   const winningText = winner.textContent;
-  console.log(winningText);
-  if (winningText.toLowerCase() === val.toLowerCase()) {
+
+  const sendInfo = async () => {
+    const response = await fetch("http://localhost:3001/emojis", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ winningText, val }),
+    });
+    const data = await response.json();
     const div = document.createElement("div");
-    div.textContent = "You Won!";
-    counter += 1;
-    console.log(counter);
+    div.textContent = data.message;
     const divBase = document.getElementById("winOrLose");
     divBase.appendChild(div);
-  } else {
-    const div = document.createElement("div");
-    div.textContent = "You Lost!";
-    const divBase = document.getElementById("winOrLose");
-    divBase.appendChild(div);
-  }
+  };
+  sendInfo();
 });
