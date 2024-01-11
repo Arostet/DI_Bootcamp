@@ -51,3 +51,11 @@ app.post("/emojis", (req, res) => {
     res.send({ message: "Not Correct" });
   }
 });
+
+/** */
+//server
+//--config - connection to database
+//--module = queries database or files
+//--controllers = functions/logic implentation of code
+//--routes - route implementation of code
+/** */
