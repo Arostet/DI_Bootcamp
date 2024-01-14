@@ -1,17 +1,23 @@
-const getData = async () => {
-  try {
-    const result = await fetch(`http://localhost:3001/users/`);
-    const data = await result.json();
-    render(data);
-  } catch (e) {
-    console.log(e);
-  }
-};
+
+// console.log("bbbbbb");
+
+const getdata = async () => {
+    try{
+        const res = await fetch('http://localhost:3001/users');
+        const data = await res.json();
+        render(data)
+    }
+    catch(err){
+        console.log(err);
+    }
+} 
+getdata()
 
 const render = (arr) => {
-  const html = arr.map((item) => {
-    return `<div>${item.name} ${item.email}</div>`;
-  });
-  document.getElementById("root").innerHTML = html.join("");
-};
-getData();
+    const html = arr.map(item => {
+        return `<div>
+            ${item.name} ${item.email}
+        </div>`
+    })
+    document.getElementById('root').innerHTML = html.join('')
+}

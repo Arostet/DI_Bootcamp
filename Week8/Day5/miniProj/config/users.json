@@ -1,0 +1,12 @@
+[
+  {
+    "name": "clean",
+    "completed": false,
+    "id": 1
+  },
+  {
+    "name": "wash",
+    "completed": true,
+    "id": 2
+  }
+]

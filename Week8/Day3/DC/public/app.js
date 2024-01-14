@@ -1,7 +1,11 @@
+let game = {};
+console.log(data);
+
 const getGame = async () => {
   const response = await fetch("http://localhost:3001/trivia/play");
   const data = await response.json();
   render(data);
+  game = data;
 };
 getGame();
 

@@ -1,40 +1,16 @@
-const users = [
-  {
-    id: 1,
-    name: "John",
-    email: "jjj@gmail.com",
-  },
-  {
-    id: 2,
-    name: "Mike",
-    email: "mmm@gmail.com",
-  },
-  {
-    id: 3,
-    name: "Sarah",
-    email: "sss@gmail.com",
-  },
-];
+const knex = require("knex");
 
-const products = [
-  {
-    id: 1,
-    name: "Towel",
-    desc: "blahdoo",
+const db = knex({
+  client: "pg",
+  connection: {
+    host: "127.0.0.1",
+    port: 5432,
+    user: "postgres",
+    password: "benbichri",
+    database: "web-server",
   },
-  {
-    id: 2,
-    name: "Chair",
-    desc: "blahdee",
-  },
-  {
-    id: 3,
-    name: "Sofa",
-    desc: "blahda",
-  },
-];
+});
 
 module.exports = {
-  users,
-  products,
+  db,
 };
