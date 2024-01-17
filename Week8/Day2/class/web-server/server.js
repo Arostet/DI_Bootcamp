@@ -15,6 +15,9 @@ const { users_router } = require("./routes/users.routes.js");
 const { products_router } = require("./routes/products.routes.js");
 const { logger, auth } = require("./middlewares/utils.js");
 // const bp = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config();
+
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -26,11 +29,14 @@ app.use(express.json());
 // app.use("/users", auth);
 // app.use("/customers", auth);
 
-app.listen(3001, () => {
-  console.log("run on port 3001");
+//process.env.PORT
+app.listen(process.env.PORT || 3001, () => {
+  console.log(`run on port ${process.env.PORT || 3001}`);
 });
 
 app.use("/", express.static(__dirname + "/public"));
 
 app.use("/users", users_router);
 app.use("/products", products_router);
+
+// .env

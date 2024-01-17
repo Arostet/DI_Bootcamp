@@ -9,6 +9,9 @@ const {
 } = require("../controllers/u.controller.js");
 
 users_router.get("/", allTasks);
+users_router.get("/:id", oneTask);
+users_router.put('/:id', updateTask)
+
 
 module.exports = {
   users_router,
