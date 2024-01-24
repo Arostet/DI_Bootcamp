@@ -6,7 +6,7 @@ const Post = (params) => {
   const [inputValue, setInputValue] = useState("");
 
   const inputValPost = async () => {
-    console.log("Sending inputValue:", inputValue); // Debug log
+    console.log("Sending inputValue:", inputValue);
 
     try {
       const res = await axios.post("http://localhost:3001/api/hello", {
