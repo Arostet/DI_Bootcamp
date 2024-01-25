@@ -6,11 +6,12 @@ const Header = (props) => {
   console.log(books);
   return (
     <div>
-      {books.map((book, index) => (
-        <div key={index}>
-          <h1>{book.volumeInfo.title}</h1>
-        </div>
-      ))}
+      {Array.isArray(books) &&
+        books.map((book, index) => (
+          <div key={index}>
+            <h1>{book.volumeInfo.title}</h1>
+          </div>
+        ))}
     </div>
   );
 };

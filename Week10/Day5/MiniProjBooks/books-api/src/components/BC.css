@@ -1,0 +1,36 @@
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-card {
+  width: 200px; /* Fixed width for each card */
+  height: 300px; /* Fixed height for each card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.book-card img {
+  width: 100%; /* Image takes the full width of the card */
+  height: 140px; /* Fixed height for the image */
+  object-fit: cover;
+}
+
+.book-card-info {
+  padding: 5px;
+}
+
+.book-card h2,
+.book-card p {
+  margin: 5px 0;
+}
