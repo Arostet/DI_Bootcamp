@@ -7,7 +7,6 @@ const ToDoInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!inputValue.trim()) return; //if its empty
 
     if (editIndex > -1) {
       const updatedToDos = [...toDos];
