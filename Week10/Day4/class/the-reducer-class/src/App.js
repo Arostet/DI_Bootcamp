@@ -1,10 +1,11 @@
-import { useState, useReducer } from "react";
+import { useState, useReducer, useRef } from "react";
 import "./App.css";
 const initialState = {
   count: 10,
 };
 const INCREMENT = "increment";
 const DECREMENT = "decrement";
+
 const reducer = (state, action) => {
   if (action.type === INCREMENT) {
     return { ...state, count: state.count + action.by };
@@ -26,6 +27,9 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   //
   console.log(state);
+
+  const divRed = useRef();
+
   //
   return (
     <div className="App">
