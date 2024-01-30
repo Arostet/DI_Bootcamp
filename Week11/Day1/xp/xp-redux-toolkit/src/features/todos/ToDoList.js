@@ -4,12 +4,13 @@ import { useState } from "react";
 import "./todo.css";
 
 const ToDoList = (props) => {
+  const [input, setInput] = useState("");
   const dispatch = useDispatch();
   const toDos = useSelector((state) => state.toDo.toDos);
-  const [input, setInput] = useState("");
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+
   return (
     <>
       <div>
